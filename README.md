@@ -2,7 +2,7 @@
 
 # html
 - HTML ใช้กำหนดโครงสร้างของหน้าเว็บ
-- //<form id="expenseForm">
+- form id="expenseForm"
 ฟอร์มสำหรับป้อนข้อมูลค่าใช้จ่าย ประกอบไปด้วย:
 <input> ชื่อรายการ (id="title")
 <input> จำนวนเงิน (id="amount")
@@ -10,10 +10,10 @@
 <input> วันที่ (id="date")
 <button> ปุ่มเพิ่มข้อมูล
 
-- //<div id="expenseList"></div>
+- id="expenseList"
 ส่วนที่ใช้แสดงรายการค่าใช้จ่ายที่ถูกบันทึก
 
-- //<script src="script.js"></script>
+- script src="script.js"
 นำเข้าไฟล์ JavaScript เพื่อเพิ่มฟังก์ชันการทำงานให้กับหน้าเว็บ
 
 
@@ -37,7 +37,7 @@
 
 # javascript
 - JavaScript ใช้จัดการข้อมูลค่าใช้จ่าย (เพิ่ม, แก้ไข, ลบ, แสดงผล)
-- document.getElementById('expenseForm').addEventListener('submit', function(event)) {...}
+- document.getElementById('expenseForm').addEventListener('submit', function(event) {...}
 ดักจับการกดปุ่ม "เพิ่ม" และบันทึกข้อมูลค่าใช้จ่าย
 
 - function saveExpense(expense) {...}
