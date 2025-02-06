@@ -2,7 +2,7 @@
 
 # html
 - HTML ใช้กำหนดโครงสร้างของหน้าเว็บ
-- <form id="expenseForm">
+- //<form id="expenseForm">
 ฟอร์มสำหรับป้อนข้อมูลค่าใช้จ่าย ประกอบไปด้วย:
 <input> ชื่อรายการ (id="title")
 <input> จำนวนเงิน (id="amount")
@@ -10,10 +10,10 @@
 <input> วันที่ (id="date")
 <button> ปุ่มเพิ่มข้อมูล
 
-- <div id="expenseList"></div>
+- //<div id="expenseList"></div>
 ส่วนที่ใช้แสดงรายการค่าใช้จ่ายที่ถูกบันทึก
 
-- <script src="script.js"></script>
+- //<script src="script.js"></script>
 นำเข้าไฟล์ JavaScript เพื่อเพิ่มฟังก์ชันการทำงานให้กับหน้าเว็บ
 
 
