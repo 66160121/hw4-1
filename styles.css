@@ -19,10 +19,24 @@ input, select, button {
     border-radius: 4px;
 }
 button {
-    background: rgb(224, 6, 6);
+    background: red;
     color: white;
     cursor: pointer;
 }
 button:hover {
-    background: rgb(241, 121, 225);
+    background: darkred;
+}
+.edit-btn, .delete-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    color: blue;
+}
+.edit-btn:hover {
+    text-decoration: underline;
+}
+.delete-btn {
+    color: red;
+}
+.delete-btn:hover {
+    text-decoration: underline;
 }
