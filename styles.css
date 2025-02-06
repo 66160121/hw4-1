@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     padding: 20px;
 }
 .container {
     max-width: 400px;
     margin: auto;
-    background: white;
+    background: rgb(125, 228, 247);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(168, 17, 17, 0.1);
@@ -15,18 +15,18 @@ input, select, button {
     width: 100%;
     margin-top: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #9bcfee;
     border-radius: 4px;
     box-sizing: border-box; /* ทำให้ padding และ border นับรวมอยู่ในขนาดของ element ทำให้ทุกกรอบเท่ากัน*/
 }
 
 button {
     background: red;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 button:hover {
-    background: darkred;
+    background: rgb(0, 139, 30);
 }
 .edit-btn, .delete-btn {
     margin-left: 10px;
