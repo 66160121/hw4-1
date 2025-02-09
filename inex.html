@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ควิซออนไลน์</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Quiz Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 to-blue-500">
-    <div class="container bg-white p-8 rounded-lg shadow-lg text-center">
-        <h1 class="text-2xl font-bold text-gray-800 mb-4">ควิซออนไลน์</h1>
-        <div id="quiz-container"></div>
-        <button id="start-btn" class="bg-blue-500 text-white px-4 py-2 rounded mt-4 hover:bg-blue-600">เริ่มควิซ</button>
-        <div id="result-container" class="hidden mt-4"></div>
+<body>
+
+    <div class="container">
+        <h1>แบบทดสอบ</h1>
+        <p id="question">กำลังโหลดคำถาม...</p>
+        <div id="choices"></div>
+        <button id="next-btn">ถัดไป</button>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
