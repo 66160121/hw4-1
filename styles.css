@@ -1,12 +1,91 @@
-.container {
-    max-width: 600px;
-    background: linear-gradient(135deg, #ffffff, #f0f8ff);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+/* ตั้งค่าพื้นหลังแบบ Gradient */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #8e44ad, #3498db);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
+/* กล่องแสดงควิซ - Glassmorphism */
+.container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2); /* กึ่งโปร่งใส */
+    backdrop-filter: blur(12px); /* ทำให้เบลอ */
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+/* เอฟเฟกต์เมื่อ Hover */
 .container:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* สไตล์หัวข้อ */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ปุ่มแบบ Gradient */
+button {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* เอฟเฟกต์เมื่อ Hover */
+button:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+/* ช่องเลือกคำตอบ */
+.choice-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* เอฟเฟกต์เมื่อ Hover */
+.choice-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* คำถาม */
+p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* คะแนน */
+.result-container {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
 }
