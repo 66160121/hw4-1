@@ -1,88 +1,12 @@
-/* ตั้งค่าพื้นฐานให้กับ body */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #9440ee, #3e84fd); /* ไล่สีพื้นหลังจากม่วงไปฟ้า */
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* กำหนดสไตล์ให้กับ container */
 .container {
-    max-width: 800px; /* เพิ่มความกว้างให้เป็นสี่เหลี่ยมผืนผ้า */
-    background: linear-gradient(135deg, #ffffff, #90dcfa); /* ไล่สีจากขาวไปฟ้าจาง */
-    padding: 40px; /* เพิ่ม Padding */
-    border-radius: 16px; /* โค้งมนเล็กน้อย */
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* เงานุ่ม */
+    max-width: 600px;
+    background: linear-gradient(135deg, #ffffff, #f0f8ff);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
 .container:hover {
-    transform: translateY(-5px); /* ทำให้กล่องขยับขึ้นเล็กน้อยเมื่อ hover */
-}
-
-/* ปรับสไตล์ให้ input, select และ button */
-input, select, button {
-    width: 100%;
-    margin-top: 12px;
-    padding: 14px;
-    border: 2px solid #0c3e8f;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 18px;
-}
-
-/* สไตล์สำหรับ input และ select */
-input, select {
-    background: linear-gradient(135deg, #afe4ee, #f0d1f3);
-    outline: none;
-    transition: 0.3s ease-in-out;
-}
-
-input:focus, select:focus {
-    border-color: #2575fc;
-    box-shadow: 0px 0px 10px rgba(37, 117, 252, 0.5);
-}
-
-/* ปรับปุ่มให้ดูทันสมัยขึ้น */
-button {
-    background: linear-gradient(135deg, #ff512f, #dd2476);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s ease-in-out;
-}
-
-button:hover {
-    background: linear-gradient(135deg, #dd2476, #ff512f);
-    transform: scale(1.05);
-}
-
-/* สไตล์ปุ่มแก้ไขและลบ */
-.edit-btn, .delete-btn {
-    margin-left: 15px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: color 0.2s ease-in-out;
-}
-
-.edit-btn {
-    color: #007bff;
-}
-
-.edit-btn:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-.delete-btn {
-    color: #ff4b2b;
-}
-
-.delete-btn:hover {
-    color: #d32f2f;
-    text-decoration: underline;
+    transform: translateY(-3px);
 }
