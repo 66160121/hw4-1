@@ -1,4 +1,4 @@
-/* ตั้งค่าพื้นหลังแบบ Gradient */
+/* พื้นหลังไล่สี */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(120deg, #8e44ad, #3498db);
@@ -9,11 +9,11 @@ body {
     padding: 20px;
 }
 
-/* กล่องแสดงควิซ - Glassmorphism */
+/* กล่อง Quiz (Glassmorphism) */
 .container {
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.2); /* กึ่งโปร่งใส */
-    backdrop-filter: blur(12px); /* ทำให้เบลอ */
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
     border-radius: 16px;
     padding: 30px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
@@ -21,40 +21,19 @@ body {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
-/* เอฟเฟกต์เมื่อ Hover */
 .container:hover {
     transform: translateY(-5px);
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* สไตล์หัวข้อ */
-h1 {
-    font-size: 24px;
+/* คำถาม */
+#question {
+    font-size: 20px;
     font-weight: bold;
     color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* ปุ่มแบบ Gradient */
-button {
-    background: linear-gradient(135deg, #ff416c, #ff4b2b);
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-}
-
-/* เอฟเฟกต์เมื่อ Hover */
-button:hover {
-    background: linear-gradient(135deg, #ff4b2b, #ff416c);
-    transform: scale(1.05);
-}
-
-/* ช่องเลือกคำตอบ */
+/* ปุ่มตัวเลือก */
 .choice-btn {
     display: block;
     width: 100%;
@@ -66,26 +45,30 @@ button:hover {
     transition: all 0.3s ease-in-out;
     color: #fff;
     font-weight: bold;
+    cursor: pointer;
 }
 
-/* เอฟเฟกต์เมื่อ Hover */
 .choice-btn:hover {
     background: rgba(255, 255, 255, 0.5);
     border-color: #ffffff;
     transform: scale(1.05);
 }
 
-/* คำถาม */
-p {
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
+/* ปุ่มถัดไป */
+#next-btn {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* คะแนน */
-.result-container {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-top: 20px;
+#next-btn:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
 }
