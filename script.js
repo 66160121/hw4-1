@@ -17,16 +17,39 @@ const questions = [
 ];
 
 let currentQuestionIndex = 0;
+let score = 0;
+
+const welcomeScreen = document.getElementById("welcome-screen");
+const quizScreen = document.getElementById("quiz-screen");
+const resultScreen = document.getElementById("result-screen");
+
+const startButton = document.getElementById("start-btn");
+const nextButton = document.getElementById("next-btn");
+const restartButton = document.getElementById("restart-btn");
 
 const questionElement = document.getElementById("question");
 const choicesContainer = document.getElementById("choices");
-const nextButton = document.getElementById("next-btn");
+const scoreText = document.getElementById("score-text");
 
+// ฟังก์ชันเปลี่ยนหน้า
+function showScreen(screen) {
+    document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+    screen.classList.add("active");
+}
+
+// เริ่มทำแบบทดสอบ
+startButton.addEventListener("click", () => {
+    score = 0;
+    currentQuestionIndex = 0;
+    showScreen(quizScreen);
+    showQuestion();
+});
+
+// แสดงคำถาม
 function showQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
-
-    choicesContainer.innerHTML = ""; // เคลียร์ตัวเลือกก่อนหน้า
+    choicesContainer.innerHTML = "";
 
     currentQuestion.choices.forEach((choice, index) => {
         const button = document.createElement("button");
@@ -35,35 +58,47 @@ function showQuestion() {
         button.addEventListener("click", () => selectAnswer(index));
         choicesContainer.appendChild(button);
     });
+
+    nextButton.style.display = "none";
 }
 
+// ตรวจสอบคำตอบ
 function selectAnswer(index) {
     const correctIndex = questions[currentQuestionIndex].answer;
     const allButtons = document.querySelectorAll(".choice-btn");
 
     allButtons.forEach((button, i) => {
         if (i === correctIndex) {
-            button.style.background = "green";  // ตอบถูกเป็นสีเขียว
+            button.style.background = "green";  // ถูก
         } else {
-            button.style.background = "red";  // ตอบผิดเป็นสีแดง
+            button.style.background = "red";  // ผิด
         }
         button.disabled = true;
     });
 
-    nextButton.style.display = "block"; // แสดงปุ่มถัดไป
+    if (index === correctIndex) {
+        score++; // เพิ่มคะแนน
+    }
+
+    nextButton.style.display = "block";
 }
 
+// ปุ่มถัดไป
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
 
     if (currentQuestionIndex < questions.length) {
         showQuestion();
-        nextButton.style.display = "none"; // ซ่อนปุ่มถัดไป
-    } else {
-        questionElement.textContent = "จบแบบทดสอบ! 🎉";
-        choicesContainer.innerHTML = "";
         nextButton.style.display = "none";
+    } else {
+        showScreen(resultScreen);
+        scoreText.textContent = `คุณได้คะแนน ${score} / ${questions.length} 🎉`;
     }
 });
 
-showQuestion();
+// ปุ่มกลับไปหน้าแรก
+restartButton.addEventListener("click", () => {
+    showScreen(welcomeScreen);
+});
+
+showScreen(welcomeScreen); // เริ่มต้นที่หน้าแรก
