@@ -8,11 +8,25 @@
 </head>
 <body>
 
-    <div class="container">
+    <!-- หน้าแรก -->
+    <div id="welcome-screen" class="screen active">
+        <h1>🎓 ยินดีต้อนรับสู่แบบทดสอบ</h1>
+        <button id="start-btn">เริ่มทำแบบทดสอบ</button>
+    </div>
+
+    <!-- หน้าคำถาม -->
+    <div id="quiz-screen" class="screen">
         <h1>แบบทดสอบ</h1>
         <p id="question">กำลังโหลดคำถาม...</p>
         <div id="choices"></div>
         <button id="next-btn">ถัดไป</button>
+    </div>
+
+    <!-- หน้าสรุปคะแนน -->
+    <div id="result-screen" class="screen">
+        <h1>🎉 จบแบบทดสอบ!</h1>
+        <p id="score-text"></p>
+        <button id="restart-btn">กลับไปหน้าแรก</button>
     </div>
 
     <script src="script.js"></script>
